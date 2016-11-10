@@ -1,3 +1,8 @@
-class Martist < ActiveRecord::Base
+class Martist <ActiveRecord::Base
+  has_many :bookings
+  validates :lastname, presence: true, length: {minimum: 2, maximum:20}
+  validates :firstname, presence: true, length: {minimum: 2, maximum:20}
+  validates :profilemessage, presence: true
+  
   
 end
