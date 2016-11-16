@@ -1,0 +1,21 @@
+<% @martists.each do |martist| %> <!--iterating through each makeup artist in the makeup artsit model---->
+  <div class="row">
+    
+    <!--<div class="col-md-2">
+      <section class="martist_info center">
+        
+      </section>
+      
+    </div> --->
+    
+    <div class="col-lg-8 well">
+      <h4><%= link_to martist.username, martist_path(martist)%></h4>
+     <p><%= martist.profilemessage %></p>
+     <p>
+         <span class= 'quiet'><small><%= time_ago_in_words(martist.created_at) %> ago</small></span>
+     </p>
+    </div>   
+     
+  </div>
+   
+<% end %>
