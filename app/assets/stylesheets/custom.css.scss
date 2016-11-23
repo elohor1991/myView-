@@ -1,5 +1,5 @@
-$navbar-default-bg:pink;
-$navbar-default-color:pink;
+$navbar-default-bg:black;
+$navbar-default-color:black;
 
 
 
@@ -21,6 +21,7 @@ $navbar-default-color:pink;
 }
 #logo:hover{
   text-decoration: none;
+  color:gold;
 }
 body{
   
@@ -33,18 +34,34 @@ body{
   margin-right:5px;
   letter-spacing:-1px;
   font-weight:bold;
-  color:#D81B60;
+  color:white;
   
 }
 
 .navbar-default .navbar-nav > li > a{
-  color:#990099;
+  color:white;
 }
 
 .footer{
   
   margin-top:25px;
   border-top: 1px solid #D81B60 ;
-  color: #D81B60;
+  color: white;
+  
+}
+
+.well {
+  background-color: #FOEEF9;
+}
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #BE9B3D;
+  border-radius: 4px;
+   width: 100%;
+  margin-bottom: 15px;
+}
+  
+input{
+  height: auto !important;
   
 }

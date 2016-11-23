@@ -1,0 +1,47 @@
+<% if @martist.errors.any? %>
+<div class="row">
+  <div class="alert alert-danger col-md-8 col-md-offset-2">
+    <h5>Please complete your profile:</h5>
+      <ul>
+        <% @martist.errors.full.messages.each do |msg| %>
+          <li>
+            <%= msg %>
+          </li>
+        <% end %>  
+      </ul>
+    
+  </div>
+</div>
+<% end %>
+
+<div class="row">
+    <div class= "well col-md-8 col-md-offset-2">
+        <%= form_for @martist do |f| %>
+        <%= f.label :lastname %>
+        <%=f.text_field :lastname%>
+        
+        <%= f.label :firstname %>
+        <%=f.text_field :firstname %>
+        
+        
+        <%= f.label :username %>
+        <%=f.text_field :username %>
+        
+        <%= f.label :email %>
+        <%=f.text_field :email %>
+        
+        <%= f.label :profile_message %>
+        <%=f.text_area :profilemessage, rows:8 %>
+        
+        <%= f.label :country_located %>
+        <%=f.text_field :lastname %>
+        
+        
+        <%= f.label :culture%>
+        <%=f.text_field :culture %>
+        
+        <%= f.submit(@martist.new_record? ? 'Create Profile' : 'Edit Profile', class: "btn btn-default" ) %> <!---we only want create recipee to show when a new form is added --->
+      <% end %>
+    </div>
+</div>
+

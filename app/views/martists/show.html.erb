@@ -1,18 +1,24 @@
 	<div class="container">
-	  <div class="row">
-	    <div class="col-sm-3" >
-					
-			</div><!-- end panel -->
-			<div class="col-sm-6 " style="margin-top:90px">
-					<div class="panel">
-						<div class="row"><!--pictures uploaded -->
-				
-						</div>
+    	<div class="row">	
+    		<div class="col-md-3 col-xs-1"><h1>peofile pix</h1></div>
+    		<div class="col-md-4 col-xs-12"><h1><%= @martist.username %></h1> </div>
+    		
+    		<div class="col-md-3 col-xs-3"><%= link_to "Edit Profile", edit_martist_path(@martist), class:"glyphicon glyphicon-option-horizontal btn btn-default"%></div>
+    		<div class="col-md-6 col-xs-12"><h3><%= @martist.profilemessage %></h3> </div>
+    		
+    		<div class="col-md-3 col-xs-12"><h1><%= link_to "Book an appointment" , ""%></h1></div>
+    	</div> 
+	 
+	 <div class="row">
+	 	<div class="col-md-9 col-xs-6">
+			<div class="thumbnail">
+				<img src="" alt="">
 						
-					</div><!-- end panel -->
-				</div><!-- end feature -->
-			
+			</div><!-- end feature --> 
 		</div><!-- end feature -->
 	 </div>
+	 
 	 </div>
+	 
+	 
 	 
