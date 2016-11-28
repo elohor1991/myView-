@@ -16,7 +16,7 @@
 
 <div class="row">
     <div class= "well col-md-8 col-md-offset-2">
-        <%= form_for @martist do |f| %>
+        <%= form_for(@martist, html: { multipart: true}) do |f| %> <!--for picture upload--->
         <%= f.label :lastname %>
         <%=f.text_field :lastname%>
         
@@ -40,8 +40,25 @@
         <%= f.label :culture%>
         <%=f.text_field :culture %>
         
+        <span class="martistpicture">
+          <%= f.file_field :picture, accept: 'image/jpeg, image/gift,image/png'%> <!---field to accept any picture format , remeber to include this field im martist params in martist controller-->
+        </span>
+        
         <%= f.submit(@martist.new_record? ? 'Create Profile' : 'Edit Profile', class: "btn btn-default" ) %> <!---we only want create recipee to show when a new form is added --->
       <% end %>
     </div>
 </div>
 
+<script type="text/javascript">
+  $('#martist_picture').bind('change', function() {
+    size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 10) {
+      alert('maximum file size is 5MB. Please choose a smaller file');
+    }
+  });
+</script>
+
+<!---heroku come preinstalled with image magick ,but in our development environment , we need to type in the   code 
+  sudo apt-get update
+  sudo apt-get install imagemagick --fix-missing    
+  ---->

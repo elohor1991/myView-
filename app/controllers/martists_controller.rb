@@ -54,7 +54,7 @@ class MartistsController <ApplicationController
         
         def martist_params
           
-          params.require(:martist).permit(:lastname, :firstname, :email, :username, :profilemessage,:country_located, :culture  )
+          params.require(:martist).permit(:lastname, :firstname, :email, :username, :profilemessage,:country_located, :culture, :picture )
         end
           
           
