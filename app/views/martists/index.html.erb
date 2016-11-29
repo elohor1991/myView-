@@ -2,8 +2,7 @@
   <div class="row">
    
     
-    <div class="col-lg-8 well"><%= image_tag(martist.picture.url, size: "250x150", class: "img-responsive center-block") if martist.picture? %> 
-      
+    <div class="col-lg-8 well"> 
       <h4><%= link_to martist.username, martist_path(martist)%></h4>
      <p><%= martist.profilemessage %></p>
      <p>
