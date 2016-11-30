@@ -11,6 +11,7 @@ class MartistsController <ApplicationController
        @martist = Martist.find(params[:id])
      end
      
+     
      def  new
        
       @martist = Martist.new
@@ -54,7 +55,7 @@ class MartistsController <ApplicationController
         
         def martist_params
           
-          params.require(:martist).permit(:lastname, :firstname, :email, :username, :profilemessage,:country_located, :culture, :picture )
+          params.require(:martist).permit(:lastname, :firstname, :email, :username, :profilemessage,:country_located, :culture )
         end
           
           
