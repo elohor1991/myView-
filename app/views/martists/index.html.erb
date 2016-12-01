@@ -1,9 +1,10 @@
-<% @martists.each do |martist| %> <!--iterating through each makeup artist in the makeup arts---->
+<% @martists.each do |martist| %> <!--iterating through each photo in the photos table,  photos is the object, view gets an object passed through it from a controller --->
   <div class="row">
    
     
     <div class="col-lg-8 well"> 
-      <h4><%= link_to martist.username, martist_path(martist) %></h4>
+       <h1>profile pix</h1>
+      <h4><%= (link_to martist.username) %></h4>
      <p><%= martist.profilemessage %></p>
      <p>
          <span class= 'quiet'><small><%= time_ago_in_words(martist.created_at) %> ago</small></span>

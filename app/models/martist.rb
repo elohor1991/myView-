@@ -6,6 +6,4 @@ class Martist <ActiveRecord::Base
   #validates :profilemessage, presence: true
 #  mount_uploader :picture, PictureUploader
   
-  
-  
 end

@@ -1,0 +1,15 @@
+<% @photos.each do |photo| %> <!--iterating through each photo in the photos table,  photos is the object, view gets an object passed through it from a controller --->
+  <div class="row">
+   
+    
+    <div class="col-lg-8 well"> 
+     <h5><%=photo.martist.username %></h5>
+     <p><%= photo.summary %></p>
+     <p>
+         <span class= 'quiet'><small><%= time_ago_in_words(photo.created_at) %> ago</small></span>
+     </p>
+    </div>   
+     
+  </div>
+   
+<% end %>
