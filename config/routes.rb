@@ -25,7 +25,9 @@ get '/home' , to: 'pages#home'
  get 'photos/:id', to: 'photos#show', as: 'photo_all'
  delete '/photos/:id', to: 'photos#destroy'
   
- resources :martists
+
+  
+ resources :martists do 
 resources :photos
- 
+end
 end
