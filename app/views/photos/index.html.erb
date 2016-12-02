@@ -1,12 +1,10 @@
-<!-----index page for photos------->
-
 
 <% @photos.each do |photo| %> <!--iterating through each photo in the photos table,  photos is the object, view gets an object passed through it from a controller --->
   <div class="row">
-   
+
     
     <div class="col-lg-8 well"> 
-     <h5><%=link_to photo.martist.username, photo_all_path(photo)%></h5>
+     <h5><%=link_to photo.martist.username, martist_path(photo.martist)%></h5>
      <p><%= photo.summary %></p>
      <p>
          <span class= 'quiet'><small><%= time_ago_in_words(photo.created_at) %> ago</small></span>

@@ -1,0 +1,12 @@
+<!-----new form action for photo upload ------>
+<h1>Upload a new Photo</h1>
+<hr/>
+<div class="row">
+  <div class="well col-md-8 col-md-offset-2">
+    <%= form_for @photo do |f| %>
+      <%=f.label :summary%>
+      <%= f.text_area :summary %>
+    <%= f.submit 'Upload photo', class: "btn btn-default"%>
+    <% end %>
+  </div>
+</div>

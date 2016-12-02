@@ -2,4 +2,9 @@
 <%= render 'form' %>
 
 
-<!----creating a barnch to secure master folder coomand: git checkout -b image-uploader (where image uploader is the name of the branch)-----> 
+<!----creating a barnch to secure master folder coomand: git checkout -b image-uploader (where image uploader is the name of the branch)
+-get '/martist/:martist_id/photos' , to: 'martists#index3'
+  
+ resources :martists do 
+resources :photos
+end----> 
