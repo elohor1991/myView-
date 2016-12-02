@@ -26,8 +26,9 @@ get '/home' , to: 'pages#home'
  delete '/photos/:id', to: 'photos#destroy'
   
 
-  
  resources :martists do 
 resources :photos
 end
+  
+
 end
