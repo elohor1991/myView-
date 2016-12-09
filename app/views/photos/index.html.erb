@@ -4,6 +4,9 @@
 
     
     <div class="col-lg-8 well"> 
+      <%= link_to photo_path(photo) do %>
+     <%= image_tag(photo.picture.url, size: "200x250", class: "img-responsive center-block") if photo.picture? %>
+      <% end %>
      <h5><%=link_to photo.martist.username , photo_path(photo)%></h5>
      <p><%= photo.summary %></p>
      
@@ -17,3 +20,4 @@
     
 <% end %> 
 
+  

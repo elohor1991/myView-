@@ -47,7 +47,7 @@ class PhotosController <ApplicationController
  private  #defining explicitly what paramters the form would accept  in this private method
  
      def photo_params
-       params.require(:photo).permit(:summary)
+       params.require(:photo).permit(:summary, :picture)
      end
   
 end

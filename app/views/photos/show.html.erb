@@ -7,7 +7,7 @@
   </div>
   <div class="col-md-8 pull-right center " >
       <div class="well photo-space">
-          <h1>Larger Image of upLoaded Photo</h1>
+           <%= image_tag(@photo.picture.url, size: "400x450", class: "img-responsive center-block") if @photo.picture? %>
           <p class="text-right"><small><%= link_to "Edit Photo" ,edit_photo_path(@photo) %></Edit></small></p>
       </div>
    </div>
