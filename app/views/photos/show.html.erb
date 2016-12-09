@@ -1,25 +1,21 @@
+<!------show larger picture  view for makeupartist photo that was newly uploaded -->
+<div class="row">
+  
+  <div class="col-md-4 pull-right center " >
+    <h5><%= @photo.summary  %></h5>
+   
+  </div>
+  <div class="col-md-8 pull-right center " >
+      <div class="well photo-space">
+          <h1>Larger Image of upLoaded Photo</h1>
+          <p class="text-right"><small><%= link_to "Edit Photo" ,edit_photo_path(@photo) %></Edit></small></p>
+      </div>
+   </div>
+  </div>
+  
+  <h5>view all images of <%=link_to  @photo.martist.username , "" %>'s album</h5>
+  
 
-<!----show pages for photo enlarged picture  for individual makeup artist---->
-
-<div class="container">
- 
-    	<div class="row">	
-    		<div class="col-md-3 col-xs-1">
-    			</div>
-    		<div class="col-md-4 col-xs-12"><h1><%= @photo.martist.username %></h1> </div>
-    		
-    		
-    		<div class="col-md-6 col-xs-12"><h3><%= @photo.martist.profilemessage %></h3> </div>
-    		
-    		<div class="col-md-3 col-xs-12"><h1><%= link_to "Book an appointment" , ""%></h1></div>
-    	</div> 
-	 
-	 <div class="row">
-	 	<div class="col-md-9 col-xs-6">
-			 <!--this div is displayed  if htere is a picture-->
-		</div><!-- end feature -->
-	 </div>
-	 
-	 </div>
-	 
-	 
+  
+  
+</div>
